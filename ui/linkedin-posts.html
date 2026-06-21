@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech — LinkedIn Posts</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg-card: #111827;
+      --bg-code: #1a2332;
+      --border: #2d3a4f;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --text-muted: #64748b;
+      --blue: #3b82f6;
+      --cyan: #06b6d4;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --red: #ef4444;
+      --purple: #a855f7;
+      --orange: #f97316;
+      --linkedin: #0a66c2;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    .banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0a66c2 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .banner h1 { font-size: 28px; font-weight: 800; }
+    .banner h1 span { color: var(--cyan); }
+    .banner p { color: var(--text-dim); margin-top: 6px; font-size: 14px; }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 32px 16px 80px; }
+
+    .post {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .post:hover { border-color: var(--linkedin); }
+
+    .post-number {
+      position: absolute;
+      top: -10px;
+      left: 16px;
+      background: var(--linkedin);
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-avatar {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--linkedin), var(--cyan));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700; font-size: 16px;
+      color: white;
+      flex-shrink: 0;
+    }
+    .post-author { font-size: 14px; font-weight: 600; }
+    .post-author small { font-weight: 400; color: var(--text-muted); font-size: 12px; display: block; }
+    .post-role { font-size: 12px; color: var(--text-muted); }
+
+    .post-body {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .post-body strong { color: var(--text); }
+    .post-body .hashtag { color: var(--cyan); }
+    .post-body .emoji { font-style: normal; }
+
+    .post-footer {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .post-actions {
+      display: flex;
+      gap: 16px;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    .post-actions span { cursor: pointer; transition: color 0.2s; }
+    .post-actions span:hover { color: var(--text); }
+
+    .copy-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.2s;
+    }
+    .copy-btn:hover { background: var(--linkedin); border-color: var(--linkedin); color: white; }
+    .copy-btn.copied { background: var(--green); border-color: var(--green); color: white; }
+
+    .tag {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-code);
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    .note {
+      background: rgba(10,102,194,0.08);
+      border-left: 3px solid var(--linkedin);
+      padding: 14px 18px;
+      margin: 16px 0 28px;
+      border-radius: 0 6px 6px 0;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+    .note strong { color: var(--linkedin); }
+
+    .all-copy-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: var(--linkedin);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      margin-bottom: 24px;
+      transition: background 0.2s;
+    }
+    .all-copy-btn:hover { background: #084e8a; }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--green);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 600px) {
+      .container { padding: 16px 12px 60px; }
+      .post { padding: 18px; }
+      .banner h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="banner">
+  <h1>🔗 <span>LinkedIn</span> Post Drafts</h1>
+  <p>Ready-to-post content about the NovaTech Finance Simulation — copy, paste, post.</p>
+</div>
+
+<div class="container">
+
+<div class="note">
+  <strong>💡 How to use:</strong> Click "Copy" on any post to copy it to your clipboard,
+  then paste it directly into LinkedIn. Each post is self-contained with hashtags.
+</div>
+
+<button class="all-copy-btn" onclick="copyAll()">📋 Copy All Posts to Clipboard</button>
+
+<!-- ======== POST 1 ======== -->
+<div class="post" id="post-1">
+  <div class="post-number">1</div>
+  <span class="tag">Launch</span>
+  <div class="post-header">
+    <div class="post-avatar">N</div>
+    <div>
+      <div class="post-author">NovaTech Finance Sim <small>🚀 Just launched</small></div>
+      <div class="post-role">Open-source project</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-1">I built a realistic finance simulation — 10 full days as Finance Manager of a SaaS company. No theory, no textbooks. Just real tasks.
+
+Day 1: Bank reconciliation + VAT check
+Day 2: Chasing overdue customers
+Day 3: Cash flow forecasting
+Day 4: Management accounts for the board
+Day 5: Audit prep + chargeback investigation
+Day 6-10: Month-end close (full accounts)
+
+48 employees. 70+ customers. £1.2M ARR. All fictional, but the work is real.
+
+Open-source, free, runs in your browser.
+
+Built with: vanilla HTML/CSS/JS + PowerShell
+Includes: interactive calculators, email inbox, work tracker, 10 datasets
+
+If you're learning finance, teaching accounting, or just curious what a finance job actually looks like — this is for you.
+
+<a class="hashtag">#FinanceSimulation</a> <a class="hashtag">#LearnFinance</a> <a class="hashtag">#OpenSource</a> <a class="hashtag">#Accounting</a> <a class="hashtag">#EdTech</a> <a class="hashtag">#SaaS</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(1)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 2 ======== -->
+<div class="post" id="post-2">
+  <div class="post-number">2</div>
+  <span class="tag">Day in the life</span>
+  <div class="post-header">
+    <div class="post-avatar">📅</div>
+    <div>
+      <div class="post-author">A Day in Finance <small>Monday morning</small></div>
+      <div class="post-role">What a finance manager actually does</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-2">Ever wondered what a Finance Manager does on a Monday morning? Here's a real example from the simulation:
+
+☕ 9:00 — Open email. Sarah (CEO) wants May accounts by Friday. Also, a customer claims they paid but we can't see it.
+📊 9:30 — Start bank reconciliation. Match 16 GL entries to the bank statement. Find one doesn't match.
+📧 10:30 — Email Sarah: "Oxbridge didn't pay. Let me call them."
+🧾 11:00 — VAT check. Opening balance £12,300. Output VAT from 20 sales invoices minus input VAT from 18 purchase invoices.
+📝 12:00 — Calculate closing VAT position.
+✅ 14:00 — Done. Move through the tracker.
+
+That's Day 1. Days 2-10 get progressively deeper: credit control, payroll, cash flow forecasting, full month-end close, board presentation.
+
+If you can do all 10 days, you've basically done a finance internship.
+
+<a class="hashtag">#Finance</a> <a class="hashtag">#DayInTheLife</a> <a class="hashtag">#Accounting</a> <a class="hashtag">#LearnByDoing</a> <a class="hashtag">#Simulation</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(2)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 3 ======== -->
+<div class="post" id="post-3">
+  <div class="post-number">3</div>
+  <span class="tag">Features</span>
+  <div class="post-header">
+    <div class="post-avatar">🛠️</div>
+    <div>
+      <div class="post-author">What's Inside <small>Feature deep-dive</small></div>
+      <div class="post-role">Everything the simulation includes</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-3">The NovaTech Finance Simulation just crossed 3,600+ lines of content. Here's exactly what's inside:
+
+10 work days (2 weeks) across:
+📊 Accounting — bank recs, VAT returns, journals
+📞 Credit control — aged debtors, chase plans, payment terms
+📈 FP&A — cash flow forecasting, budget variance, reforecasting
+📑 Management accounts — P&L, balance sheet, cash flow statement
+🎯 Board prep — executive pack, strategic recommendations
+
+The interactive dashboard (open index.html in any browser) includes:
+• 10 embedded datasets with sortable tables
+• 4 calculators (reconciliation, VAT, cash flow, depreciation)
+• 50-item work tracker with localStorage persistence
+• Simulated email inbox for all 10 days
+• Full company profile
+
+Also included: PowerShell scripts, finance policies doc, month-end close checklist, sample journal entries, fixed asset schedule, and a beginner's guide.
+
+46 files. All open-source. Zero dependencies.
+
+<a class="hashtag">#OpenSource</a> <a class="hashtag">#Finance</a> <a class="hashtag">#EdTech</a> <a class="hashtag">#Learning</a> <a class="hashtag">#BuildInPublic</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(3)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 4 ======== -->
+<div class="post" id="post-4">
+  <div class="post-number">4</div>
+  <span class="tag">For students</span>
+  <div class="post-header">
+    <div class="post-avatar">🎓</div>
+    <div>
+      <div class="post-author">To Finance Students <small>From a practitioner</small></div>
+      <div class="post-role">Bridge the gap between theory and practice</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-4">To every finance student who's ever asked: "When will I ever use this?"
+
+I built you a simulation.
+
+No multiple choice. No textbook problems. You're the Finance Manager at a real (fake) company with 48 employees, 70 customers, and actual financial data.
+
+You'll reconcile bank statements, calculate VAT, chase overdue invoices, negotiate with suppliers, process payroll, prepare management accounts, and present to the board.
+
+By Day 10 you'll have done:
+• Every major month-end close task
+• A full set of financial statements
+• A board presentation with strategic recommendations
+• A cash flow forecast with scenario analysis
+
+All in your browser. All free. All open-source.
+
+The gap between university and the workplace is huge. This simulation bridges it.
+
+<a class="hashtag">#FinanceStudents</a> <a class="hashtag">#Accounting</a> <a class="hashtag">#EdTech</a> <a class="hashtag">#Careers</a> <a class="hashtag">#HigherEd</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(4)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 5 ======== -->
+<div class="post" id="post-5">
+  <div class="post-number">5</div>
+  <span class="tag">Teachers</span>
+  <div class="post-header">
+    <div class="post-avatar">👨‍🏫</div>
+    <div>
+      <div class="post-author">For Accounting Lecturers <small>Classroom-ready</small></div>
+      <div class="post-role">Use this in your course</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-5">Accounting lecturers — if you're tired of marking the same textbook problem 200 times, try this:
+
+Give your students a real company to run for 10 days.
+
+The NovaTech Finance Simulation gives each student:
+• A company with P&L, balance sheet, and cash
+• 10 days of tasks that build on each other
+• Realistic data (20 sales invoices, 18 purchase invoices, bank statements, etc.)
+• Interactive tools they can use in their browser
+• A work tracker so you can see their progress
+
+Week 1 covers: reconciliation, credit control, payroll, management accounts, board prep
+Week 2 covers: full month-end close, financial statements, strategic planning
+
+No install. No login. No cost. Open the HTML file and go.
+
+If you teach accounting, finance, or business — this is a free resource for your classroom.
+
+<a class="hashtag">#AccountingEducation</a> <a class="hashtag">#Teaching</a> <a class="hashtag">#HigherEd</a> <a class="hashtag">#EdTech</a> <a class="hashtag">#Finance</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(5)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 6 ======== -->
+<div class="post" id="post-6">
+  <div class="post-number">6</div>
+  <span class="tag">Career</span>
+  <div class="post-header">
+    <div class="post-avatar">💼</div>
+    <div>
+      <div class="post-author">Breaking into Finance <small>No experience?</small></div>
+      <div class="post-role">Build your resume with a simulation</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-6">"Looking for a finance role but need experience?"
+
+That's the catch-22 everyone talks about. You can't get a job without experience, and you can't get experience without a job.
+
+This simulation won't replace a real job. But it will:
+
+• Give you confidence using real financial data
+• Teach you the workflow of a month-end close
+• Show you how cash flow, P&L, and balance sheet connect
+• Help you answer interview questions with real examples
+• Demonstrate you've actually done the work — not just read about it
+
+Put it on your resume:
+"Completed 10-day finance simulation — bank reconciliations, credit control, management accounts, board reporting, cash flow forecasting."
+
+It's free. It's open-source. It runs in your browser.
+
+The experience gap is real. This helps close it.
+
+<a class="hashtag">#FinanceJobs</a> <a class="hashtag">#CareerChange</a> <a class="hashtag">#Finance</a> <a class="hashtag">#Accounting</a> <a class="hashtag">#JobSearch</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(6)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 7 ======== -->
+<div class="post" id="post-7">
+  <div class="post-number">7</div>
+  <span class="tag">Stack</span>
+  <div class="post-header">
+    <div class="post-avatar">⚙️</div>
+    <div>
+      <div class="post-author">Built With <small>Tech stack</small></div>
+      <div class="post-role">How it's built and why</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-7">This simulation has zero dependencies. Here's the stack:
+
+Frontend (ui/index.html):
+• Vanilla HTML — no frameworks
+• Vanilla CSS — no Tailwind, no Bootstrap
+• Vanilla JavaScript — no React, no Vue, no npm
+• All data embedded as JS objects — no API calls, no database
+• localStorage for progress persistence
+
+Backend (optional):
+• PowerShell scripts for bank rec, VAT, cash flow
+• Git for version control
+
+Total: 46 files, 3,600+ lines, 0 dependencies.
+
+Why build it this way?
+• Anyone can open index.html and it works — no install, no server
+• Students shouldn't need to configure anything
+• No internet required — it's all in the file
+• Easy to fork, modify, and extend
+• Teaches the finance, not the tech
+
+The simulation is what matters — the tech just gets out of the way.
+
+<a class="hashtag">#WebDev</a> <a class="hashtag">#VanillaJS</a> <a class="hashtag">#OpenSource</a> <a class="hashtag">#EdTech</a> <a class="hashtag">#BuildInPublic</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(7)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 8 ======== -->
+<div class="post" id="post-8">
+  <div class="post-number">8</div>
+  <span class="tag">Open source</span>
+  <div class="post-header">
+    <div class="post-avatar">🌍</div>
+    <div>
+      <div class="post-author">Why I Open-Sourced It <small>Free for everyone</small></div>
+      <div class="post-role">Education should be accessible</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-8">I built this simulation because I believe finance education should be:
+
+• Free — no paywalls, no subscriptions, no "enter your credit card"
+• Practical — theory is useless without application
+• Accessible — runs in a browser, no install, no login
+• Realistic — based on actual finance workflows, not textbook problems
+
+That's why it's open-source on GitHub. Anyone can:
+• Clone it and start learning in 5 seconds
+• Modify it for their own classroom
+• Translate it to another language
+• Add more days, more complexity, more scenarios
+• Fix bugs and improve it
+
+No investors. No monetisation. No data collection. Just 46 files that teach you finance.
+
+If that resonates, star the repo and share it with someone who needs it.
+
+<a class="hashtag">#OpenSource</a> <a class="hashtag">#Education</a> <a class="hashtag">#Finance</a> <a class="hashtag">#EdTech</a> <a class="hashtag">#Accessibility</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(8)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 9 ======== -->
+<div class="post" id="post-9">
+  <div class="post-number">9</div>
+  <span class="tag">Week 1 vs Week 2</span>
+  <div class="post-header">
+    <div class="post-avatar">📅</div>
+    <div>
+      <div class="post-author">Two Weeks, Two Levels <small>Progressive difficulty</small></div>
+      <div class="post-role">How the simulation builds your skills</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-9">The simulation is split into 2 weeks — and they're very different:
+
+Week 1 — Mid-Month (Days 1-5)
+You learn the core finance workflows:
+• Bank reconciliation
+• VAT control
+• Aged debtors & credit control
+• Cash flow forecasting
+• P&L vs budget analysis
+• Board reporting
+• Chargeback investigation
+
+Week 2 — Month-End Close (Days 6-10)
+You close the books and produce full accounts:
+• Revenue reconciliation & journals
+• Supplier negotiation & accruals
+• Payroll processing with new hires
+• Depreciation & amortisation
+• Full trial balance
+• Balance sheet
+• Cash flow statement
+• H2 reforecast & strategic planning
+
+Week 1 teaches you the pieces. Week 2 shows you how they fit together.
+
+You get the full picture by Day 10.
+
+<a class="hashtag">#Finance</a> <a class="hashtag">#Learning</a> <a class="hashtag">#MonthEndClose</a> <a class="hashtag">#Accounting</a> <a class="hashtag">#ManagementAccounts</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(9)">📋 Copy</button>
+  </div>
+</div>
+
+<!-- ======== POST 10 ======== -->
+<div class="post" id="post-10">
+  <div class="post-number">10</div>
+  <span class="tag">Call to action</span>
+  <div class="post-header">
+    <div class="post-avatar">🎯</div>
+    <div>
+      <div class="post-author">Ready to Start? <small>5-second setup</small></div>
+      <div class="post-role">Here's exactly what to do</div>
+    </div>
+  </div>
+  <div class="post-body" id="content-10">If you want to try the NovaTech Finance Simulation, here's how:
+
+1. Go to the GitHub repo (link in comments)
+2. Click the green "Code" button → "Download ZIP"
+3. Extract the zip
+4. Open ui/index.html in your browser
+5. Read the tasks tab for Day 1
+6. Check your email inbox in the app
+7. Start reconciling the bank statement
+
+That's it. You're now Finance Manager at a SaaS company.
+
+No signup. No install. No cost.
+
+If you get stuck, the beginner's guide (ui/how-to.html) walks you through every feature.
+
+Your first task: figure out why a customer says they paid but the money isn't in the bank.
+
+Good luck. You'll need it. (Not really — the data is all there.)
+
+<a class="hashtag">#Finance</a> <a class="hashtag">#GetStarted</a> <a class="hashtag">#OpenSource</a> <a class="hashtag">#LearnFinance</a></div>
+  <div class="post-footer">
+    <div class="post-actions">
+      <span>👍 0</span>
+      <span>💬 0</span>
+      <span>🔄 0</span>
+    </div>
+    <button class="copy-btn" onclick="copyPost(10)">📋 Copy</button>
+  </div>
+</div>
+
+</div>
+
+<div class="toast" id="toast">✅ Copied to clipboard!</div>
+
+<script>
+function copyPost(id) {
+  const el = document.getElementById('content-' + id);
+  const text = el.textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = el.closest('.post').querySelector('.copy-btn');
+    btn.textContent = '✅ Copied!';
+    btn.classList.add('copied');
+    showToast('✅ Post ' + id + ' copied!');
+    setTimeout(() => {
+      btn.textContent = '📋 Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  }).catch(() => {
+    // Fallback
+    const range = document.createRange();
+    range.selectNode(el);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    showToast('✅ Copied!');
+  });
+}
+
+function copyAll() {
+  let all = '';
+  for (let i = 1; i <= 10; i++) {
+    const el = document.getElementById('content-' + i);
+    all += '--- Post ' + i + ' ---\n\n' + el.textContent.trim() + '\n\n';
+  }
+  navigator.clipboard.writeText(all.trim()).then(() => {
+    showToast('✅ All 10 posts copied!');
+  });
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2500);
+}
+</script>
+
+</body>
+</html>
