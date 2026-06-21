@@ -1,0 +1,28 @@
+Date,Type,Description,Reference,Debit,Credit,Balance (after)
+01-Jun-26,B/FWD,Balance brought forward,,,247830.55
+01-Jun-26,DD,WeWork - June rent,DD-8721,3600.00,,244230.55
+02-Jun-26,DD,AWS - May hosting,DD-8722,5100.00,,239130.55
+02-Jun-26,BACS,DataFlow Corp - INV-2026-0601,PAY-601,,2157.60,241288.15
+03-Jun-26,BACS,Manchester Digital Ltd - INV-2026-0602,PAY-602,,1794.00,243082.15
+03-Jun-26,CHAPS,Payroll transfer to Barclays Payroll,INT-101,48720.00,,194362.15
+05-Jun-26,BACS,Pinnacle Media Group - INV-2026-0605,PAY-605,,1173.60,195535.75
+05-Jun-26,DD,Apple Inc - MacBooks PO-2026-0607,DD-8723,5517.60,,190018.15
+06-Jun-26,BACS,Quantum Startups Inc - INV-2026-0608,PAY-608,,1612.80,191630.95
+08-Jun-26,BACS,HubSpot - Q3 subscription,CHQ-301,2880.00,,188750.95
+09-Jun-26,DD,Intercom - June platform,DD-8724,720.00,,188030.95
+09-Jun-26,BACS,Stripe - May processing fees,CHQ-302,1416.00,,186614.95
+10-Jun-26,CHAPS,Bank Loan Repayment (instalment 6/12),BP-550,4500.00,,182114.95
+12-Jun-26,DD,SendGrid - May email delivery,DD-8725,612.00,,181502.95
+15-Jun-26,BACS,Microsoft 365 annual license,CHQ-303,5616.00,,175886.95
+16-Jun-26,LODGEMENT,Cheque deposit - June contracts (INV-0603/0604),DEP-01,,3535.20,179422.15
+18-Jun-26,DD,BT Business - June broadband,DD-8726,408.00,,179014.15
+19-Jun-26,BACS,LegalEagle LLP - Contract review,CHQ-304,2880.00,,176134.15
+22-Jun-26,DD,Google Cloud - May usage,DD-8727,1068.00,,175066.15
+23-Jun-26,BACS,OmniTech Solutions (early settlement discount 2%) - INV-0617,PAY-617,,2464.90,177531.05
+24-Jun-26,BACS,Staples UK - Office supplies,CHQ-305,456.00,,177075.05
+25-Jun-26,DD,Dell Technologies - Servers (deposit),DD-8728,4320.00,,172755.05
+26-Jun-26,CHAPS,Quarterly VAT Payment to HMRC,BP-551,12300.00,,160455.05
+27-Jun-26,BACS,Northern Power Grid - Q2 electricity,CHQ-306,744.00,,159711.05
+28-Jun-26,LODGEMENT,BrightPath Education - INV-0612,PAY-612,,1788.00,161499.05
+29-Jun-26,DD,WealthGuard Insurance - Q3 premium,DD-8729,2220.00,,159279.05
+30-Jun-26,INT,Monthly interest credit,INT-002,,82.45,159361.50

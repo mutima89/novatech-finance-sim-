@@ -1,0 +1,19 @@
+Invoice ID,Vendor,Date,Due Date,Description,Net Total,VAT (20%),Gross Total,Status
+PO-2026-0601,AWS,01-Jun-26,15-Jun-26,May cloud infrastructure (EC2 + RDS + S3),4250.00,850.00,5100.00,Paid
+PO-2026-0602,WeWork,01-Jun-26,01-Jul-26,Monthly office rent - June,3000.00,600.00,3600.00,Unpaid
+PO-2026-0603,HubSpot,03-Jun-26,03-Jul-26,Q3 CRM subscription (quarterly),2400.00,480.00,2880.00,Unpaid
+PO-2026-0604,Intercom,04-Jun-26,04-Jul-26,June customer messaging platform,600.00,120.00,720.00,Unpaid
+PO-2026-0605,SendGrid (Twilio),05-Jun-26,05-Jul-26,May email delivery services,510.00,102.00,612.00,Unpaid
+PO-2026-0606,Stripe,06-Jun-26,06-Jul-26,May payment processing fees,1180.00,236.00,1416.00,Unpaid
+PO-2026-0607,Apple Inc,08-Jun-26,22-Jun-26,"MacBook Pro 14"" M4 x2 (for new engineers)",4598.00,919.60,5517.60,Paid
+PO-2026-0608,Microsoft Corp,10-Jun-26,10-Jul-26,"Microsoft 365 Business x50 (annual)",4680.00,936.00,5616.00,Unpaid
+PO-2026-0609,BT Business,10-Jun-26,01-Jul-26,June office broadband & phone lines,340.00,68.00,408.00,Unpaid
+PO-2026-0610,LegalEagle LLP,12-Jun-26,12-Jul-26,Contract review - Aviva Health Partnership,2400.00,480.00,2880.00,Unpaid
+PO-2026-0611,WealthGuard Insurance,15-Jun-26,15-Jul-26,Q3 employer liability & PI insurance,1850.00,370.00,2220.00,Unpaid
+PO-2026-0612,Dell Technologies,17-Jun-26,01-Jul-26,"PowerEdge Server x2 (infra upgrade)",7200.00,1440.00,8640.00,Unpaid
+PO-2026-0613,Staples UK,18-Jun-26,02-Jul-26,Office supplies - June order,380.00,76.00,456.00,Unpaid
+PO-2026-0614,Google Cloud,20-Jun-26,04-Jul-26,May Google Workspace + GCP usage,890.00,178.00,1068.00,Unpaid
+PO-2026-0615,Northern Power Grid,22-Jun-26,06-Jul-26,Q2 office electricity bill,620.00,124.00,744.00,Unpaid
+PO-2026-0616,Eventbrite,25-Jun-26,09-Jul-26,"Annual user conference - venue deposit",3500.00,700.00,4200.00,Unpaid
+PO-2026-0617,Upwork,28-Jun-26,12-Jul-26,"Contract developer (freelance - API project)",3200.00,640.00,3840.00,Unpaid
+PO-2026-0618,PWC Accountants,30-Jun-26,14-Jul-26,"June advisory & tax compliance retainer",4000.00,800.00,4800.00,Unpaid

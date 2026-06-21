@@ -1,0 +1,8 @@
+Date,Reference,Description,GL (Debit),GL (Credit),Bank (Debit),Bank (Credit),Matched?,Difference,Notes
+01-Jun-26,DD-8721,WeWork - June rent,,3600.00,,3600.00,YES,0,
+02-Jun-26,DD-8722,AWS - May hosting,,5100.00,,5100.00,YES,0,
+02-Jun-26,PAY-601,DataFlow Corp - INV-2026-0601,,,2157.60,,YES,0,
+03-Jun-26,PAY-602,Manchester Digital - INV-2026-0602,,,1794.00,,YES,0,
+03-Jun-26,INT-101,Payroll transfer to Barclays Payroll,,48720.00,,48720.00,YES,0,
+,,,,,,,,,
+,,,,,,,TOTAL DIFFERENCE:,0.00,

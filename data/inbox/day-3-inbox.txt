@@ -1,0 +1,57 @@
+=== NovaTech Email Inbox — Wednesday 24 June 2026 ===
+
+From: Sarah Chen <s.chen@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: Friday board prep + new hires
+---
+Morning — board call is Friday 10am. I need a cash flow forecast for July
+by tomorrow afternoon.
+
+Key inputs:
+- Two new engineers starting 1st July (Sr Backend £75k, DevOps £65k)
+- AWS Enterprise Support renewal at £4,250/mo
+- Meridian Trust Group hopefully signed this week
+
+Also — have we got headroom for all this? Let me know.
+
+Sarah
+
+---
+From: Priya Sharma <p.sharma@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: Training request — AI/ML for Engineering Leaders
+---
+Hi — I'd like to attend a 3-day course in London:
+"AI/ML for Engineering Leaders"
+Course fee: £1,800 + VAT
+Travel & accommodation est: £400
+
+Total approx: £2,200 + VAT
+
+Is there budget for this? Training budget remaining is ~£3,500 for H1.
+
+Happy to defer if cash is tight.
+
+Thanks,
+Priya
+
+---
+From: Mark Rivers <m.rivers@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: AWS Enterprise Support renewal
+---
+Finance — our AWS Enterprise Support contract is up for renewal on 1st July.
+New pricing is £4,250/mo (was £3,800). Can you check we can absorb this?
+
+Mark
+
+---
+From: HMRC <noreply@tax.service.gov.uk>
+To: Finance Manager <finance@novatech.dev>
+Subject: Real Time Information (RTI) — Late submission warning
+---
+Our records show the RTI submission for Employee EMP-016 (Ben Thompson)
+was submitted 2 days late in May. Please ensure future submissions are
+made on or before the pay date.
+
+This is a warning — repeated late submissions may result in penalties.

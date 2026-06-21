@@ -1,0 +1,21 @@
+Invoice ID,Customer,Date,Due Date,Products,Net Total,VAT (20%),Gross Total,Status
+INV-2026-0601,DataFlow Corp,01-Jun-26,30-Jun-26,"NovaFlow Pro x2",1798.00,359.60,2157.60,Paid
+INV-2026-0602,Manchester Digital Ltd,02-Jun-26,02-Jul-26,"NovaFlow Core x5",1495.00,299.00,1794.00,Paid
+INV-2026-0603,Oxbridge Analytics,03-Jun-26,03-Jul-26,"NovaFlow Enterprise x1",2499.00,499.80,2998.80,Unpaid
+INV-2026-0604,GreenLeaf Consulting,04-Jun-26,04-Jul-26,"NovaAnalytics x3",447.00,89.40,536.40,Unpaid
+INV-2026-0605,Pinnacle Media Group,05-Jun-26,05-Jul-26,"NovaFlow Pro x1 + NovaSupport x1",978.00,195.60,1173.60,Paid
+INV-2026-0606,Atlas Logistics Ltd,05-Jun-26,05-Jul-26,"NovaFlow Core x8",2392.00,478.40,2870.40,Unpaid
+INV-2026-0607,North Shore Hospital,08-Jun-26,08-Jul-26,"NovaFlow Enterprise x2",4998.00,999.60,5997.60,Unpaid
+INV-2026-0608,Quantum Startups Inc,09-Jun-26,09-Jul-26,"NovaFlow Core x3 + NovaAnalytics x3",1344.00,268.80,1612.80,Paid
+INV-2026-0609,Thornton & Sons Ltd,10-Jun-26,10-Jul-26,"NovaFlow Pro x2 + NovaSupport x2",1956.00,391.20,2347.20,Unpaid
+INV-2026-0610,City University London,11-Jun-26,11-Jul-26,"NovaFlow Enterprise x1 + NovaAnalytics x3",2646.00,529.20,3175.20,Unpaid
+INV-2026-0611,Reed Shipping Co,12-Jun-26,12-Jul-26,"NovaFlow Core x4",1196.00,239.20,1435.20,Unpaid
+INV-2026-0612,BrightPath Education,15-Jun-26,15-Jul-26,"NovaAnalytics x10",1490.00,298.00,1788.00,Unpaid
+INV-2026-0613,Fortress Security Group,16-Jun-26,16-Jul-26,"NovaFlow Pro x3",2697.00,539.40,3236.40,Unpaid
+INV-2026-0614,WebCraft Agency,18-Jun-26,18-Jul-26,"NovaFlow Core x6 + NovaSupport x2",1952.00,390.40,2342.40,Unpaid
+INV-2026-0615,Aviva Health Partners,19-Jun-26,19-Jul-26,"NovaFlow Enterprise x1 + NovaAnalytics x1 + NovaSupport x1",2727.00,545.40,3272.40,Unpaid
+INV-2026-0616,St. Mary's School Trust,22-Jun-26,22-Jul-26,"NovaFlow Core x12",3588.00,717.60,4305.60,Unpaid
+INV-2026-0617,OmniTech Solutions,23-Jun-26,23-Jul-26,"NovaFlow Pro x2 + NovaAnalytics x2",2096.00,419.20,2515.20,Unpaid
+INV-2026-0618,Summit Hospitality,25-Jun-26,25-Jul-26,"NovaAnalytics x5",745.00,149.00,894.00,Unpaid
+INV-2026-0619,Phoenix Insurance Ltd,26-Jun-26,26-Jul-26,"NovaFlow Enterprise x1",2499.00,499.80,2998.80,Unpaid
+INV-2026-0620,Creative Spark Agency,30-Jun-26,30-Jul-26,"NovaFlow Core x3",897.00,179.40,1076.40,Unpaid

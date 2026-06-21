@@ -1,0 +1,17 @@
+Asset ID,Category,Description,Purchase Date,Cost (£),Useful Life (Years),Depreciation Method,Monthly Depreciation (£),Accum Deprec to 31 May 2026 (£),NBV at 31 May 2026 (£),Location,Notes
+FA-001,Office Equipment,Meeting room furniture set,15-Mar-20,8500.00,5,Straight Line,141.67,10625.00,-2125.00,Office - Room A,Over-depreciated (past life)
+FA-002,Office Equipment,Reception desk & chairs,20-Jun-20,5200.00,5,Straight Line,86.67,6500.00,-1300.00,Office - Reception,Over-depreciated (past life)
+FA-003,Office Equipment,Office kitchen appliances,05-Sep-20,3800.00,5,Straight Line,63.33,4516.67,-716.67,Office - Kitchen,Over-depreciated
+FA-004,Office Equipment,Server room rack & cooling units,10-Jan-21,7500.00,5,Straight Line,125.00,8125.00,-625.00,Office - Server Room,Over-depreciated
+FA-005,Office Equipment,Ergonomic chairs (x10),02-Mar-22,5500.00,5,Straight Line,91.67,4675.00,825.00,Open plan,Within life
+FA-006,Office Equipment,Standing desks (x8),15-Jun-22,4500.00,5,Straight Line,75.00,3550.00,950.00,Open plan,Within life
+FA-007,Computer Equipment,Developer laptops (x15 - mixed),Various,67500.00,3,Straight Line,1875.00,67500.00,0.00,Various,Fully depreciated
+FA-008,Computer Equipment,Developer laptops (x10 - 2024 batch),15-Jan-24,38500.00,3,Straight Line,1069.44,28472.22,10027.78,Engineering team,Within life
+FA-009,Computer Equipment,Developer laptops (x5 - 2025 batch),10-Jun-25,18000.00,3,Straight Line,500.00,12000.00,6000.00,Engineering team,Within life
+FA-010,Computer Equipment,MacBook Pro M4 x2 (new - Jun 2026),08-Jun-26,4598.00,3,Straight Line,127.72,0.00,4598.00,New hires,Just purchased
+FA-011,Computer Equipment,Office monitors (x20),20-Aug-22,8000.00,3,Straight Line,222.22,8333.33,-333.33,Open plan,Over-depreciated
+FA-012,Computer Equipment,PowerEdge Servers x2 (Jun 2026 dep't only),17-Jun-26,7200.00,3,Straight Line,0.00,0.00,7200.00,Server Room,Deposit paid
+FA-013,Software Dev,Platform development costs (2022),01-Jan-22,90000.00,5,Straight Line,1500.00,67500.00,22500.00,N/A,Capitalised development
+FA-014,Software Dev,Platform development costs (2023),01-Jan-23,65000.00,5,Straight Line,1083.33,30333.33,34666.67,N/A,Capitalised development
+FA-015,Software Dev,Platform development costs (2024),01-Jan-24,35000.00,5,Straight Line,583.33,11666.67,23333.33,N/A,Capitalised development
+FA-016,Software Dev,Platform development costs (2025),01-Jan-25,20000.00,5,Straight Line,333.33,3333.33,16666.67,N/A,Capitalised development

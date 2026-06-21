@@ -1,0 +1,26 @@
+Journal ID,Date,Description,Account Code,Account Name,Debit (£),Credit (£),Posted By
+JUN-001,01-Jun-26,"Prepaid insurance amortisation (Q2 portion)",1200,Prepaid Expenses,,"TBD",Finance
+JUN-001,01-Jun-26,"Prepaid insurance amortisation (Q2 portion)",6210,Software Subscriptions,"TBD",,Finance
+JUN-002,03-Jun-26,"Payroll funding transfer (net pay + NI + pension)",1010,Bank - Payroll,48720.00,,Finance
+JUN-002,03-Jun-26,"Payroll transfer from main account",1000,Bank - Main,,48720.00,Finance
+JUN-003,03-Jun-26,"May payroll accrual reversal",2100,Accrued Expenses,3500.00,,Finance
+JUN-003,03-Jun-26,"May payroll accrual reversal",6000,Employee Salaries,,3500.00,Finance
+JUN-004,03-Jun-26,"Payroll cost for June (48 employees)",6000,Employee Salaries,195000.00,,Finance
+JUN-004,03-Jun-26,"PAYE/NI liability",2300,PAYE/NI Payable,,18700.00,Finance
+JUN-004,03-Jun-26,"Pension liability",2400,Pension Payable,,4200.00,Finance
+JUN-004,03-Jun-26,"Bank - Payroll (net salaries)",1010,Bank - Payroll,,172100.00,Finance
+JUN-005,15-Jun-26,"Loan repayment (cap + int) - 6/12",2700,Bank Loan (Short Term),4125.00,,Finance
+JUN-005,15-Jun-26,"Loan interest",6320,Bank Charges & Interest,375.00,,Finance
+JUN-005,15-Jun-26,"Bank - Main",1000,Bank - Main,,4500.00,Finance
+JUN-006,26-Jun-26,"Quarterly VAT payment",2200,VAT Payable,12300.00,,Finance
+JUN-006,26-Jun-26,"Bank - Main",1000,Bank - Main,,12300.00,Finance
+JUN-007,30-Jun-26,"Depreciation - Office equipment (monthly)",6400,Depreciation,583.33,,Finance
+JUN-007,30-Jun-26,"Acc deprec - Office equipment",1410,Acc Deprec - Office Equip,,583.33,Finance
+JUN-008,30-Jun-26,"Depreciation - Computer equipment (monthly)",6400,Depreciation,3555.56,,Finance
+JUN-008,30-Jun-26,"Acc deprec - Computer equipment",1510,Acc Deprec - Computer Equip,,3555.56,Finance
+JUN-009,30-Jun-26,"Amortisation - Software dev (monthly)",6410,Amortisation,3500.00,,Finance
+JUN-009,30-Jun-26,"Acc amort - Software",1610,Acc Amort - Software,,3500.00,Finance
+JUN-010,30-Jun-26,"Deferred revenue amortisation (monthly - all deferred)",2600,Deferred Revenue,5000.00,,Finance
+JUN-010,30-Jun-26,"Sales revenue",4000,Sales Revenue,,5000.00,Finance
+JUN-011,30-Jun-26,"Accrued AWS June excess usage",2000,Trade Creditors,,800.00,Finance
+JUN-011,30-Jun-26,"Cloud infrastructure",5000,Cost of Sales,800.00,,Finance

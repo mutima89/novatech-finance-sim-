@@ -1,0 +1,65 @@
+=== NovaTech Email Inbox — Friday 26 June 2026 ===
+
+From: Sarah Chen <s.chen@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: Board call at 10am — prep ready?
+---
+Morning — board call in 2 hours. Do you have the pack ready?
+
+Expect questions on:
+1. Why is net loss increasing despite revenue growth?
+2. Debtors are up — what's the risk?
+3. How do the new hires affect our runway?
+4. When do we break even?
+
+Be prepared to walk through the numbers.
+
+Sarah
+
+---
+From: PWC Audit <pwc.audit@uk.pwc.com>
+To: Finance Manager <finance@novatech.dev>
+Subject: Audit questionnaire — due today
+---
+Final reminder — please complete and return the audit prep
+questionnaire by COB today.
+
+Items outstanding:
+☐ Bank confirmations
+☐ Top 5 debtors confirmation
+☐ Related party transaction disclosure
+☐ Post-balance sheet events
+
+David Whittaker | PWC Manchester
+
+---
+From: Stripe <notifications@stripe.com>
+To: Finance Manager <finance@novatech.dev>
+Subject: RE: Chargeback CB-2026-0625-001 — Awaiting response
+---
+You have 3 days remaining to respond to the chargeback
+from R. Davies (r.davies@webcraftagency.com).
+
+If you do not respond by 29 June, the chargeback will
+be automatically accepted and £899.00 deducted from
+your account.
+
+Stripe Dispute Team
+
+---
+From: Barclays Business <notifications@barclays.co.uk>
+To: Finance Manager <finance@novatech.dev>
+Subject: Weekly Account Summary — 26 June 2026
+---
+Account: Business Current
+Sort Code: 20-45-78
+Account No: 89374621
+
+Closing Balance: £159,361.50
+
+Upcoming Direct Debits:
+- 01 Jul: WeWork (£3,600)
+- 02 Jul: AWS (£5,100)
+- 05 Jul: Dell Technologies (£4,320)
+
+Please ensure sufficient funds are available.

@@ -1,0 +1,46 @@
+=== NovaTech Email Inbox — Thursday 25 June 2026 ===
+
+From: Sarah Chen <s.chen@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: URGENT — Board pack by 4pm
+---
+Morning — I need the management accounts pack by 4pm today.
+
+Must include:
+1. May P&L vs Budget
+2. Cash position & burn rate
+3. Key metrics (AR days, AP days, runway)
+4. Variance commentary
+
+Board call is 10am sharp tomorrow.
+
+Sarah
+
+---
+From: PWC Audit <pwc.audit@uk.pwc.com>
+To: Finance Manager <finance@novatech.dev>
+Subject: Re: Audit prep — Fixed Asset Register
+---
+Following up on our earlier email — could you please send us
+your fixed asset register with depreciation calculations?
+
+We need this for the year-end file prep.
+
+Specifically:
+- Office Equipment (cost & accumulated deprec)
+- Computer Equipment
+- Capitalised Software Development costs
+
+Thanks,
+David Whittaker | Senior Audit Manager
+PWC Manchester
+
+---
+From: James Okonkwo <j.okonkwo@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: Meridian — credit check update?
+---
+Any word on Meridian? They're chasing us for a decision.
+Need to know by end of today.
+
+James

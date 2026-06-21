@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech — How To Guide</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg-card: #111827;
+      --bg-code: #1a2332;
+      --border: #2d3a4f;
+      --text: #e2e8f0;
+      --text-muted: #64748b;
+      --text-dim: #94a3b8;
+      --blue: #3b82f6;
+      --cyan: #06b6d4;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --red: #ef4444;
+      --purple: #a855f7;
+      --orange: #f97316;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* Top banner */
+    .banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .banner h1 { font-size: 28px; font-weight: 800; }
+    .banner h1 span { color: var(--cyan); }
+    .banner p { color: var(--text-dim); margin-top: 8px; font-size: 15px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    .badge-row { display: flex; justify-content: center; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .badge-blue { background: rgba(59,130,246,0.15); color: var(--blue); border: 1px solid rgba(59,130,246,0.3); }
+    .badge-green { background: rgba(34,197,94,0.15); color: var(--green); border: 1px solid rgba(34,197,94,0.3); }
+    .badge-yellow { background: rgba(234,179,8,0.15); color: var(--yellow); border: 1px solid rgba(234,179,8,0.3); }
+    .badge-purple { background: rgba(168,85,247,0.15); color: var(--purple); border: 1px solid rgba(168,85,247,0.3); }
+
+    /* Content */
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      background: var(--blue);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 8px;
+      color: var(--cyan);
+    }
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 6px;
+      color: var(--yellow);
+    }
+    p { margin-bottom: 12px; color: var(--text-dim); }
+    strong { color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    ul, ol { margin-bottom: 16px; padding-left: 24px; }
+    li { margin-bottom: 6px; color: var(--text-dim); }
+    li strong { color: var(--text); }
+
+    /* Code blocks */
+    code {
+      background: var(--bg-code);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--cyan);
+    }
+    pre {
+      background: var(--bg-code);
+      padding: 16px 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 12px 0 20px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-dim);
+    }
+
+    /* Notes / callouts */
+    .note {
+      background: rgba(59,130,246,0.08);
+      border-left: 3px solid var(--blue);
+      padding: 14px 18px;
+      margin: 16px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .note strong { color: var(--blue); }
+    .note-warn {
+      background: rgba(234,179,8,0.08);
+      border-left-color: var(--yellow);
+    }
+    .note-warn strong { color: var(--yellow); }
+    .note-tip {
+      background: rgba(34,197,94,0.08);
+      border-left-color: var(--green);
+    }
+    .note-tip strong { color: var(--green); }
+
+    /* Steps */
+    .step {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .step-num {
+      width: 28px; height: 28px;
+      min-width: 28px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+    }
+    .step-content { flex: 1; }
+    .step-content p { margin-bottom: 4px; }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th { background: var(--bg-code); color: var(--text-dim); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+    td { color: var(--text-dim); }
+
+    .key-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin: 12px 0 20px;
+    }
+    .key-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+    .key-item .key { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+    .key-item .val { font-size: 13px; font-weight: 600; color: var(--text); margin-top: 2px; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+    .footer-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: var(--blue);
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #2563eb; text-decoration: none; }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+    }
+    .btn-outline:hover { background: var(--bg-card); color: var(--text); }
+
+    @media (max-width: 600px) {
+      .container { padding: 24px 16px 60px; }
+      .banner h1 { font-size: 22px; }
+      .key-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="banner">
+  <h1>🧭 <span>NovaTech</span> Finance Simulation</h1>
+  <p>The complete beginner's guide to running your first week as Finance Manager</p>
+  <div class="badge-row">
+    <span class="badge badge-blue">10 Days</span>
+    <span class="badge badge-green">2 Work Weeks</span>
+    <span class="badge badge-yellow">46 Files</span>
+    <span class="badge badge-purple">For Beginners</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ============================================================ -->
+<h2><span class="num">1</span> What Is This?</h2>
+
+<p>
+  <strong>NovaTech Solutions Ltd.</strong> is a made-up SaaS company in Manchester with 48 employees.
+  <strong>You are the Finance Manager.</strong> Every day you get tasks that a real finance person
+  would do — checking bank statements, chasing customers who haven't paid, calculating payroll,
+  preparing reports for the board, and dealing with auditors.
+</p>
+
+<p>
+  There are <strong>10 days</strong> of work split into 2 weeks. Each day has 3-4 tasks.
+  You work through them at your own pace. There are no right or wrong answers —
+  the point is to <strong>learn by doing</strong>.
+</p>
+
+<div class="note">
+  <strong>💡 Who is this for?</strong> Beginner finance students, people learning accounting,
+  anyone who wants to see what a real finance job looks like without the pressure.
+  You don't need to be an expert — the tasks teach you as you go.
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="num">2</span> How to Start</h2>
+
+<p>You have <strong>two ways</strong> to run the simulation. Pick whichever is easier.</p>
+
+<h3>Option A: The HTML Interface (Recommended)</h3>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <p>Open <strong>File Explorer</strong> and go to:</p>
+    <pre><code>C:\Downloads\GitHub Projects\novatech-finance-sim\ui\</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <p>Double-click <strong><code>index.html</code></strong> — it opens in your web browser.</p>
+    <p class="note note-tip" style="margin:8px 0 0;">
+      <strong>✅ No internet needed.</strong> Everything runs in your browser — it's all built into the file.
+    </p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <p>You'll see the <strong>Dashboard</strong>. Click <strong>"Today's Tasks"</strong> in the sidebar to start Day 1.</p>
+  </div>
+</div>
+
+<h3>Option B: The PowerShell Launcher</h3>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <p>Open <strong>PowerShell</strong> (search for it in the Start Menu).</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <p>Type this and press Enter:</p>
+    <pre><code>cd "C:\Downloads\GitHub Projects\novatech-finance-sim"
+powershell -ExecutionPolicy Bypass -File .\start-simulation.ps1</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <p>A menu appears. Press <strong>1</strong> to read today's tasks, <strong>2</strong> to check email, etc.</p>
+  </div>
+</div>
+
+<div class="note note-warn">
+  <strong>⚠ PowerShell tip:</strong> If you get a security error, you already used the
+  <code>-ExecutionPolicy Bypass</code> flag above — it should work. If not,
+  right-click PowerShell and select "Run as Administrator" first.
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="num">3</span> The Dashboard</h2>
+
+<p>When you open the HTML interface, this is what you see first:</p>
+
+<div class="key-grid">
+  <div class="key-item">
+    <div class="key">💰 Cash at Bank</div>
+    <div class="val">£159,361.50</div>
+  </div>
+  <div class="key-item">
+    <div class="key">📋 Accounts Receivable</div>
+    <div class="val">£72,491.80</div>
+  </div>
+  <div class="key-item">
+    <div class="key">📈 June Sales</div>
+    <div class="val">20 invoices</div>
+  </div>
+  <div class="key-item">
+    <div class="key">👥 Employees</div>
+    <div class="val">48 (+2 incoming)</div>
+  </div>
+</div>
+
+<p><strong>What you can do from here:</strong></p>
+<ul>
+  <li><strong>Today's Tasks</strong> — jump straight into the work</li>
+  <li><strong>Company Profile</strong> — read about NovaTech's people, products, and bank accounts</li>
+  <li><strong>Data Browser</strong> — browse all financial data (invoices, bank statements, etc.)</li>
+  <li><strong>Finance Tools</strong> — use calculators for VAT, bank rec, cash flow, depreciation</li>
+  <li><strong>Work Tracker</strong> — check off tasks as you complete them</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2><span class="num">4</span> The Sidebar (Navigation)</h2>
+
+<p>The sidebar on the left is your navigation menu. Here's what each section does:</p>
+
+<table>
+  <tr><th>Section</th><th>What it does</th></tr>
+  <tr><td>📊 Dashboard</td><td>Home screen with key stats and quick actions</td></tr>
+  <tr><td>📋 Today's Tasks</td><td>Opens the current day's work (tasks, inbox, data)</td></tr>
+  <tr><td>🏢 Company Profile</td><td>All info about NovaTech — people, banks, products</td></tr>
+  <tr><td>📁 Data Browser</td><td>View every CSV data file as a table with totals</td></tr>
+  <tr><td>🔧 Finance Tools</td><td>Interactive calculators (reconciliation, VAT, etc.)</td></tr>
+  <tr><td>✅ Work Tracker</td><td>Checklist of all tasks across all 10 days</td></tr>
+  <tr><td>1️⃣ Week 1 / 2️⃣ Week 2</td><td>Click to switch weeks, then click a day number</td></tr>
+</table>
+
+<div class="note note-tip">
+  <strong>💡 Tip:</strong> Click a day number (e.g. "Day 1: Monday 22 Jun") under the week
+  in the sidebar to jump straight to that day's tasks.
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="num">5</span> Working Through a Day</h2>
+
+<p>Each day has <strong>three tabs</strong> at the top:</p>
+
+<h3>📋 Tasks Tab</h3>
+<p>
+  This shows your task list for the day. The full task brief is in the
+  <code>tasks/</code> folder as a markdown file, but the HTML interface gives you
+  a quick summary and links to your data and tools.
+</p>
+
+<h3>📧 Inbox Tab</h3>
+<p>
+  This is your email. People send you messages — Sarah (the CEO), James (Sales Director),
+  PWC (the auditors), and others. Click any email to read the full message.
+  The emails contain clues and requests that drive your tasks.
+</p>
+
+<h3>📁 Data Tab</h3>
+<p>
+  Quick access to all financial data for today. Click any dataset to see it as a table.
+  The tables show column totals automatically for money columns.
+</p>
+
+<div class="step">
+  <div class="step-num">→</div>
+  <div class="step-content">
+    <p><strong>Your workflow each day:</strong></p>
+    <ol>
+      <li>Open <strong>Today's Tasks</strong> from the sidebar</li>
+      <li>Read the <strong>Tasks tab</strong> to see what you need to do</li>
+      <li>Check <strong>Inbox</strong> for emails with context and instructions</li>
+      <li>Browse <strong>Data</strong> to find the numbers you need</li>
+      <li>Use <strong>Finance Tools</strong> to help with calculations</li>
+      <li>Open the <strong>Work Tracker</strong> and check off what you finished</li>
+      <li>Click <strong>Next →</strong> to move to the next day</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="num">6</span> The Finance Tools (Calculators)</h2>
+
+<p>Four tools are built right into the interface. Click <strong>🔧 Finance Tools</strong> in the sidebar.</p>
+
+<h3>💰 Bank Reconciliation</h3>
+<p>
+  <strong>What it does:</strong> You type in your General Ledger entries (one per line in the format
+  <code>Date | Ref | Description | Amount</code>) and it totals them up.
+  Compare the total to your bank statement to check if everything matches.
+</p>
+<p><strong>When to use:</strong> Day 1 task — reconciling Barclays Main account.</p>
+
+<h3>🧾 VAT Control Account</h3>
+<p>
+  <strong>What it does:</strong> Enter your opening VAT balance, total output VAT from sales,
+  and total input VAT from purchases. It calculates whether you owe HMRC money or
+  can reclaim some.
+</p>
+<p><strong>When to use:</strong> Day 1 (VAT check) and Day 7 (quarterly VAT return prep).</p>
+
+<div class="note">
+  <strong>📐 How VAT works in the UK (simplified):</strong><br>
+  • Output VAT = 20% of what you charge customers<br>
+  • Input VAT = 20% of what your suppliers charge you<br>
+  • You pay HMRC the difference: Output − Input<br>
+  • If Input > Output, HMRC owes you money
+</div>
+
+<h3>📈 Cash Flow Forecast</h3>
+<p>
+  <strong>What it does:</strong> Enter your opening balance plus expected weekly inflows and outflows.
+  It projects your cash position week by week and warns you if cash runs low.
+</p>
+<p><strong>When to use:</strong> Day 3 when Sarah asks for a July cash flow forecast.</p>
+
+<h3>📊 Depreciation Calculator</h3>
+<p>
+  <strong>What it does:</strong> Enter an asset's cost, residual value, and useful life.
+  It calculates annual and monthly straight-line depreciation.
+</p>
+<p><strong>When to use:</strong> Day 4 and Day 8 when preparing the fixed asset register and posting depreciation journals.</p>
+
+<!-- ============================================================ -->
+<h2><span class="num">7</span> Understanding the Data</h2>
+
+<p>The simulation has <strong>10 datasets</strong> you'll work with. Here's what each one is:</p>
+
+<table>
+  <tr><th>Dataset</th><th>Rows</th><th>What's In It</th></tr>
+  <tr><td>Sales Invoices</td><td>20</td><td>All invoices raised in June 2026, who bought what, how much, paid or not</td></tr>
+  <tr><td>Purchase Invoices</td><td>18</td><td>All bills from suppliers (AWS, WeWork, Dell, etc.)</td></tr>
+  <tr><td>Bank — Barclays Main</td><td>27</td><td>Every transaction hitting the main business account</td></tr>
+  <tr><td>Bank — Barclays Payroll</td><td>5</td><td>Payroll account: funding in, HMRC out, net salaries out</td></tr>
+  <tr><td>Bank — Starling Expense</td><td>15</td><td>Staff expenses: travel, meals, office supplies</td></tr>
+  <tr><td>Aged Debtors</td><td>23</td><td>Who owes money and how overdue they are</td></tr>
+  <tr><td>Chart of Accounts</td><td>50</td><td>All account codes (the "map" of the accounting system)</td></tr>
+  <tr><td>Opening Balances</td><td>21</td><td>Trial balance at 1st June 2026 (debits and credits)</td></tr>
+  <tr><td>Fixed Asset Schedule</td><td>16</td><td>Every physical asset the company owns and its depreciation</td></tr>
+  <tr><td>Employee List</td><td>30</td><td>All staff with roles, salaries, departments</td></tr>
+</table>
+
+<div class="note note-tip">
+  <strong>💡 Tip:</strong> When you view a data table, it auto-calculates totals for
+  money columns. For example, viewing Sales Invoices shows you total net, total VAT,
+  and total gross at the top. This saves you adding them up manually.
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="num">8</span> The Two Weeks (What You'll Do)</h2>
+
+<h3>Week 1: 22–26 June</h3>
+<table>
+  <tr><th>Day</th><th>Theme</th><th>What You'll Learn</th></tr>
+  <tr><td>Mon 22</td><td>Month-End Reconciliation</td><td>Match bank statement to GL, investigate missing payments, check VAT</td></tr>
+  <tr><td>Tue 23</td><td>Credit Control</td><td>Run aged debtors, decide who to chase, do a credit check, pay suppliers</td></tr>
+  <tr><td>Wed 24</td><td>Payroll & Forecasting</td><td>Calculate payroll costs for new hires, build a cash flow forecast</td></tr>
+  <tr><td>Thu 25</td><td>Management Accounts</td><td>Prepare P&L vs Budget, fixed asset register, key metrics</td></tr>
+  <tr><td>Fri 26</td><td>Board Prep & Audit</td><td>Board pack, audit questionnaire, chargeback investigation</td></tr>
+</table>
+
+<h3>Week 2: 29 Jun – 3 Jul</h3>
+<table>
+  <tr><th>Day</th><th>Theme</th><th>What You'll Learn</th></tr>
+  <tr><td>Mon 29</td><td>Close — Revenue & AR</td><td>Revenue reconciliation, settlement negotiation, month-end journals</td></tr>
+  <tr><td>Tue 30</td><td>Close — Payables & Accruals</td><td>Supplier negotiation, accruals schedule, loan disclosure, VAT return</td></tr>
+  <tr><td>Wed 1 Jul</td><td>Close — Payroll & Assets</td><td>New hire payroll, depreciation journals, new customer onboarding</td></tr>
+  <tr><td>Thu 2 Jul</td><td>Management Accounts</td><td>Trial balance, balance sheet, cash flow statement, audit file</td></tr>
+  <tr><td>Fri 3 Jul</td><td>Board & Strategy</td><td>Board presentation, H2 reforecast, scenario analysis, final report</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2><span class="num">9</span> The Work Tracker</h2>
+
+<p>
+  The <strong>Work Tracker</strong> (click ✅ in the sidebar) lists all 50 tasks across both weeks.
+  As you finish each task, click the checkbox. Your progress is saved automatically
+  in your browser — even if you close the page and come back later, your checkmarks
+  will still be there.
+</p>
+
+<div class="note note-tip">
+  <strong>💡 Tip:</strong> You can reset all progress by clicking the red
+  "Reset All Progress" button at the bottom of the tracker.
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="num">10</span> Tips for Each Day</h2>
+
+<h4>Day 1 — Bank Reconciliation</h4>
+<p>
+  Compare the GL entries listed in your task to the bank statement.
+  One customer (Oxbridge Analytics) says they paid — check if the money
+  actually arrived. If not, that's a discrepancy to investigate.
+  For the VAT check, use the VAT Calculator tool — add up output VAT
+  from all sales invoices and input VAT from all purchase invoices.
+</p>
+
+<h4>Day 2 — Credit Control</h4>
+<p>
+  Sort the aged debtors by how overdue they are. The oldest ones
+  (Sterling Partners at £12,500 from March) need the most urgent action.
+  For the credit check on Meridian Trust, think about their
+  credit score (62/100), the CCJ on record, and whether you'd trust them
+  with a £2,499/mo contract.
+</p>
+
+<h4>Day 3 — Cash Flow Forecast</h4>
+<p>
+  Use the Cash Flow tool. Start with the current balance (£159,361.50).
+  Estimate weekly inflows (collections from customers) and outflows
+  (payroll, suppliers, loan repayment). The tool will show you
+  if cash runs low at any point.
+</p>
+
+<h4>Day 4 — Management Accounts</h4>
+<p>
+  The P&L template is in <code>tools/pl-statement-template.csv</code>.
+  Fill in the May actual vs budget numbers. The biggest variance tells you
+  where to focus. For the fixed asset register, calculate monthly
+  depreciation: cost ÷ (useful life in years × 12).
+</p>
+
+<h4>Day 5 — Board Pack</h4>
+<p>
+  This is where you present everything you've done. The board will ask
+  tough questions — prepare answers. For the chargeback, check if the
+  customer who filed it (R. Davies) matches your customer WebCraft Agency
+  (INV-2026-0614). If yes, you can prove service was delivered.
+</p>
+
+<h4>Week 2 (Days 6-10) — Month-End Close</h4>
+<p>
+  This is the "real work" of finance. You're closing the month —
+  finalising all revenue, booking accruals, processing payroll,
+  producing the balance sheet and cash flow statement, and presenting
+  to the board with a strategic plan. Use all the tools and data
+  you've learned from Week 1.
+</p>
+
+<!-- ============================================================ -->
+<h2><span class="num">11</span> Where Are the Files?</h2>
+
+<p>Everything lives in one folder. Here's the map:</p>
+
+<pre><code>novatech-finance-sim/
+├── README.md                     ← This project's readme
+├── company-profile.md            ← Company details in plain text
+├── start-simulation.ps1          ← PowerShell launcher
+│
+├── ui/                           ← HTML interface (open index.html)
+│   ├── index.html                ← Main app (open this)
+│   ├── how-to.html               ← This guide (open this too!)
+│   ├── css/style.css             ← All styling
+│   └── js/
+│       ├── data.js               ← All the numbers
+│       └── app.js                ← All the logic
+│
+├── tasks/                        ← Task briefs (Week 1)
+│   ├── day-1-monday-reconciliation.md
+│   ├── day-2-tuesday-credit-control.md
+│   ├── day-3-wednesday-payroll-forecast.md
+│   ├── day-4-thursday-management-accounts.md
+│   └── day-5-friday-board-prep-audit.md
+│
+├── tasks/week2/                  ← Task briefs (Week 2)
+│   ├── day-6-monday-close-revenue.md
+│   ├── day-7-tuesday-close-payables.md
+│   ├── day-8-wednesday-close-payroll.md
+│   ├── day-9-thursday-management-accounts-complete.md
+│   └── day-10-friday-board-strategy.md
+│
+├── data/                         ← All financial data (CSV files)
+│   ├── chart-of-accounts.csv
+│   ├── opening-balances-june-2026.csv
+│   ├── transactions/             ← Invoices, bank statements
+│   ├── journals/                 ← Sample journal entries
+│   ├── assets/                   ← Fixed asset schedule
+│   ├── budgets/                  ← FY2026 budget
+│   ├── inbox/                    ← Email text files per day
+│   └── additional-data/          ← Employee list
+│
+├── tools/                        ← Templates for your work
+│   ├── reconciliation-template.csv
+│   ├── pl-statement-template.csv
+│   ├── fixed-asset-register-template.csv
+│   └── cashflow-template.csv
+│
+├── processes/                    ← Finance policies & procedures
+│   ├── month-end-close-checklist.md
+│   └── finance-policies.md
+│
+├── scripts/                      ← PowerShell finance tools
+│   ├── reconcile.ps1
+│   ├── vat-calculator.ps1
+│   └── cashflow-builder.ps1
+│
+└── output/                       ← Save your work here
+    └── tracker.md
+</code></pre>
+
+<!-- ============================================================ -->
+<h2><span class="num">12</span> Common Questions</h2>
+
+<h3>Do I need to know accounting?</h3>
+<p>
+  No. The tasks explain everything as you go. If you see a term you don't recognise
+  (like "accrual" or "deferred revenue"), the task brief explains it.
+  The finance policies document (<code>processes/finance-policies.md</code>)
+  also explains how NovaTech handles each accounting area.
+</p>
+
+<h3>Is there a "correct" answer?</h3>
+<p>
+  For some tasks yes (e.g. "does the bank reconciliation balance?").
+  For others, it's about judgement (e.g. "should we accept this settlement?").
+  The point is to <strong>think through the decision</strong> and defend your reasoning.
+</p>
+
+<h3>Where do I save my work?</h3>
+<p>
+  The <code>output/</code> folder is for your work. Save spreadsheets, notes,
+  or decisions there. The Work Tracker in the HTML interface saves automatically.
+</p>
+
+<h3>I finished both weeks — what now?</h3>
+<p>
+  You've completed 10 days of real-world finance tasks. You've done:
+  bank recs, credit control, cash flow forecasting, management accounts,
+  board reporting, month-end close, audit prep, and strategic planning.
+  That's pretty much everything a Finance Manager does in a month.
+  Try running through again and making different decisions to see how
+  things play out differently.
+</p>
+
+<div class="note">
+  <strong>📌 Remember:</strong> This is a simulation. The company, people, and numbers
+  are all fictional. But the tasks are based on real finance jobs at real SaaS companies.
+  What you learn here transfers directly to the real world.
+</div>
+
+<!-- ============================================================ -->
+<hr>
+
+<h2><span class="num">13</span> Quick Start (Cheat Sheet)</h2>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <strong>Open the app:</strong> Double-click <code>ui/index.html</code>
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <strong>Start Day 1:</strong> Click "Today's Tasks" in sidebar
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <strong>Read the tasks:</strong> In the Tasks tab
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">4</div>
+  <div class="step-content">
+    <strong>Check email:</strong> Switch to the Inbox tab
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">5</div>
+  <div class="step-content">
+    <strong>Find data:</strong> Switch to Data tab or use Data Browser
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">6</div>
+  <div class="step-content">
+    <strong>Calculate:</strong> Use Finance Tools for VAT, cash flow, etc.
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">7</div>
+  <div class="step-content">
+    <strong>Track progress:</strong> Check off tasks in Work Tracker
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">8</div>
+  <div class="step-content">
+    <strong>Next day:</strong> Click "Next →" button at top of day view
+  </div>
+</div>
+
+<div class="footer-nav">
+  <a href="index.html" class="btn">🚀 Launch the Simulation</a>
+  <span style="color:var(--text-muted);font-size:13px;">Questions? Check the tasks/ folder</span>
+</div>
+
+</div>
+
+</body>
+</html>

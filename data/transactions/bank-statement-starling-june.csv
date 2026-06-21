@@ -1,0 +1,16 @@
+Date,Type,Description,Reference,Debit,Credit,Balance (after)
+01-Jun-26,B/FWD,Balance brought forward,,,5000.00
+02-Jun-26,POS,Costa Coffee - Client meeting (James O),TX-001,8.50,,4991.50
+03-Jun-26,POS,Greggs - Office team breakfast, TX-002,32.40,,4959.10
+05-Jun-26,POS,Trainline - James O to London (client visit),TX-003,128.00,,4831.10
+08-Jun-26,POS,Uber - Priya S to airport (conference),TX-004,45.00,,4786.00
+10-Jun-26,POS,Amazon Business - Office cable kit,TX-005,67.80,,4718.20
+12-Jun-26,POS,The Pasta Factory - Team lunch (12 ppl),TX-006,156.00,,4562.20
+15-Jun-26,POS,Currys - Webcam x5 (remote hires),TX-007,149.50,,4412.70
+17-Jun-26,POS,OpenTable - Client dinner (Sarah C),TX-008,234.00,,4178.70
+19-Jun-26,BACS,Adobe Creative Cloud subscription (monthly),TX-009,59.99,,4118.71
+22-Jun-26,POS,Trainline - Mark R to Birmingham, TX-010,85.00,,4033.71
+24-Jun-26,POS,WH Smith - Conference supplies,TX-011,42.50,,3991.21
+26-Jun-26,POS,The Botanist - Client drinks event,TX-012,312.00,,3679.21
+28-Jun-26,BACS,DigitalOcean - Side project hosting,TX-013,24.00,,3655.21
+30-Jun-26,POS,Argos - Office chair replacement x2,TX-014,289.00,,3366.21

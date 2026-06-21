@@ -1,0 +1,51 @@
+Code,Name,Category,Balance Type
+1000,Cash at Bank - Barclays Main,Current Assets,Debit
+1010,Cash at Bank - Barclays Payroll,Current Assets,Debit
+1020,Cash at Bank - Starling Expense,Current Assets,Debit
+1100,Trade Debtors / Accounts Receivable,Current Assets,Debit
+1200,Prepaid Expenses,Current Assets,Debit
+1300,VAT Reclaimable,Current Assets,Debit
+1400,Office Equipment (Cost),Fixed Assets,Debit
+1410,Accumulated Depreciation - Office Equipment,Fixed Assets,Credit
+1500,Computer Equipment (Cost),Fixed Assets,Debit
+1510,Accumulated Depreciation - Computer Equipment,Fixed Assets,Credit
+1600,Software Development (Capitalised),Intangible Assets,Debit
+1610,Accumulated Amortisation - Software,Intangible Assets,Credit
+2000,Trade Creditors / Accounts Payable,Current Liabilities,Credit
+2100,Accrued Expenses,Current Liabilities,Credit
+2200,VAT Payable,Current Liabilities,Credit
+2300,PAYE / NI Payable,Current Liabilities,Credit
+2400,Pension Payable,Current Liabilities,Credit
+2500,Corporation Tax Payable,Current Liabilities,Credit
+2600,Deferred Revenue,Current Liabilities,Credit
+2700,Bank Loan (Short Term),Current Liabilities,Credit
+3000,Share Capital,Equity,Credit
+3100,Retained Earnings,Equity,Credit
+3200,Profit & Loss Account,Equity,Credit
+4000,Sales - NovaFlow Core,Revenue,Credit
+4010,Sales - NovaFlow Pro,Revenue,Credit
+4020,Sales - NovaFlow Enterprise,Revenue,Credit
+4030,Sales - NovaAnalytics,Revenue,Credit
+4040,Sales - NovaSupport Add-On,Revenue,Credit
+4100,Sales - Professional Services / Onboarding,Revenue,Credit
+5000,Cost of Sales - Cloud Infrastructure,Cost of Sales,Debit
+5100,Cost of Sales - Payment Processing Fees,Cost of Sales,Debit
+6000,Employee Salaries,Expenses,Debit
+6010,Employer Pension Contributions,Expenses,Debit
+6020,Employer NI Contributions,Expenses,Debit
+6030,Recruitment & Agency Fees,Expenses,Debit
+6100,Rent & Office Costs,Expenses,Debit
+6110,Utilities & Internet,Expenses,Debit
+6120,Office Supplies,Expenses,Debit
+6200,Sales & Marketing,Expenses,Debit
+6210,Software Subscriptions,Expenses,Debit
+6220,Travel & Accommodation,Expenses,Debit
+6230,Entertainment & Client Meals,Expenses,Debit
+6300,Professional Fees (Legal & Accounting),Expenses,Debit
+6310,Insurance,Expenses,Debit
+6320,Bank Charges & Interest,Expenses,Debit
+6400,Depreciation,Expenses,Debit
+6410,Amortisation,Expenses,Debit
+6500,Foreign Exchange Gains/Losses,Expenses,Debit
+7000,Other Income,Other Income,Credit
+7100,Interest Received,Other Income,Credit

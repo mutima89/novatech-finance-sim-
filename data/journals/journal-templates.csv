@@ -1,0 +1,13 @@
+Template ID,Description,Debit Account,Debit Code,Credit Account,Credit Code,Amount Type
+J-001,Payroll accrual (monthly),Employee Salaries,6000,PAYE/NI Payable,2300,Fixed
+J-001,Payroll accrual (monthly),Employee Salaries,6000,Pension Payable,2400,Fixed
+J-001,Payroll accrual (monthly),Employee Salaries,6000,Bank - Payroll,1010,Balance
+J-002,Depreciation - Office Equipment,Depreciation,6400,Acc Deprec - Office Equip,1410,Caclulated
+J-003,Depreciation - Computer Equipment,Depreciation,6400,Acc Deprec - Computer Equip,1510,Caclulated
+J-004,Amortisation - Software Development,Amortisation,6410,Acc Amort - Software,1610,Caclulated
+J-005,Prepaid expense amortisation,Amortisation (in OpEx),6210,Different account per item,1200,Fixed
+J-006,Deferred revenue recognition,Deferred Revenue,2600,Sales Revenue,4000,Fixed
+J-007,VAT control (quarterly),VAT Payable,2200,Bank,1000,Balance
+J-008,Accrued expense entry,Expense (various),Various,Accrued Expenses,2100,Fixed
+J-009,Accrued expense reversal,Accrued Expenses,2100,Expense (various),Various,Fixed
+J-010,Bad debt provision,Bad Debt Expense (in Other Op Costs),6500,Trade Debtors,1100,Percentage

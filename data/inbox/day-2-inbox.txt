@@ -1,0 +1,55 @@
+=== NovaTech Email Inbox — Tuesday 23 June 2026 ===
+
+From: James Okonkwo <j.okonkwo@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: Debtor chase — some of these are getting old
+---
+Morning — can you run the aged debtors report?
+
+I'm getting worried about:
+- Harbour Logistics (£6,240 — from April!)
+- TechVista Ltd (£4,995 — due 31st May)
+- Westwood Associates (£3,480 — overdue now)
+
+Who should I call today?
+
+Also — Meridian Trust Group want to sign by Friday. Any news on the credit check?
+
+James
+
+---
+From: Sarah Chen <s.chen@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: Oxbridge follow-up
+---
+Did you check on Oxbridge? They emailed me again asking if we received their payment.
+Please sort ASAP.
+
+Sarah
+
+---
+From: WeWork <accounts@wework.com>
+To: Finance Manager <finance@novatech.dev>
+Subject: REMINDER — June rent overdue
+---
+Dear NovaTech Solutions,
+
+This is a reminder that your June rent invoice (INV-13422-WK) for £3,600
+is now overdue. Please arrange payment at your earliest convenience.
+
+Late payment charges of 4% above Bank of England base rate will apply
+after 14 days.
+
+WeWork Accounts Team
+
+---
+From: Stripe <notifications@stripe.com>
+To: Finance Manager <finance@novatech.dev>
+Subject: New chargeback filed — CB-2026-0625-001
+---
+A customer (r.davies@webcraftagency.com) has filed a chargeback
+for £899.00 — "Transaction not recognised".
+
+Please review and respond within 7 days.
+
+Stripe Dispute Team

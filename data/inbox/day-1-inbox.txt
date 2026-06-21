@@ -1,0 +1,58 @@
+=== NovaTech Email Inbox — Monday 22 June 2026 ===
+
+From: Sarah Chen <s.chen@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: Month-end accounts + Oxbridge query
+---
+Morning! Hope you had a good weekend.
+
+Two things:
+1. I need the May management accounts by Friday. Can you start pulling the P&L together?
+2. Oxbridge Analytics called me — they say they paid INV-2026-0603 (£2,998.80) last week.
+   Can you check the bank and confirm? I don't see it on my radar.
+
+Thanks,
+Sarah
+
+---
+From: James Okonkwo <j.okonkwo@novatech.dev>
+To: Finance Manager <finance@novatech.dev>
+Subject: New prospect — credit check needed
+---
+Hi — got a hot lead, Meridian Trust Group, potential Enterprise client.
+Can we fast-track a credit check? They want to sign by end of week.
+
+Cheers,
+James
+
+---
+From: PWC Accounts <pwc.audit@uk.pwc.com>
+To: Finance Manager <finance@novatech.dev>
+Subject: Audit prep — June YE readiness
+---
+Dear NovaTech Finance Team,
+
+As part of our year-end audit planning, please complete the attached
+questionnaire and return by Friday 26th June.
+
+Key items we'll need:
+- Bank confirmations as at 31 May 2026
+- Aged debtors listing
+- Fixed asset register
+- Related party transaction disclosures
+
+Please confirm receipt.
+
+Best regards,
+David Whittaker
+Senior Audit Manager, PWC Manchester
+
+---
+From: HMRC <noreply@tax.service.gov.uk>
+To: Finance Manager <finance@novatech.dev>
+Subject: VAT Payment Reminder — Quarterly Return
+---
+Your VAT payment of £12,300 for the period ending 31 May 2026
+is due by 30 June 2026. Your reference is: VB-372981455-0526.
+
+Please ensure funds are available.

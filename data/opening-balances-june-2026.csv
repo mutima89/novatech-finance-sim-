@@ -1,0 +1,23 @@
+Account Code,Account Name,Balance
+1000,Cash at Bank - Barclays Main,247830.55
+1010,Cash at Bank - Barclays Payroll,0.00
+1020,Cash at Bank - Starling Expense,5000.00
+1100,Trade Debtors / Accounts Receivable,89450.00
+1200,Prepaid Expenses,12400.00
+1300,VAT Reclaimable,8200.00
+1400,Office Equipment (Cost),35000.00
+1410,Accumulated Depreciation - Office Equipment,-14000.00
+1500,Computer Equipment (Cost),128000.00
+1510,Accumulated Depreciation - Computer Equipment,-64000.00
+1600,Software Development (Capitalised),210000.00
+1610,Accumulated Amortisation - Software,-84000.00
+2000,Trade Creditors / Accounts Payable,-31200.00
+2100,Accrued Expenses,-8800.00
+2200,VAT Payable,-12300.00
+2300,PAYE / NI Payable,-18700.00
+2400,Pension Payable,-4200.00
+2600,Deferred Revenue,-15750.00
+2700,Bank Loan (Short Term),-50000.00
+3000,Share Capital,-100000.00
+3100,Retained Earnings,-315530.55
+3200,Profit & Loss Account (Current Year P&L),-17400.00

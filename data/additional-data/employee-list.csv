@@ -1,0 +1,31 @@
+Employee ID,Name,Department,Role,Start Date,Annual Salary (£),Monthly Gross (£),NI Category,Pension Opted In
+EMP-001,Sarah Chen,Executive,CEO,01-Jan-19,120000,10000,A,YES
+EMP-002,Mark Rivers,Executive,CTO,01-Mar-19,105000,8750,A,YES
+EMP-003,James Okonkwo,Sales,Sales Director,01-Jun-19,95000,7917,A,YES
+EMP-004,Priya Sharma,Engineering,Head of Engineering,01-Sep-19,95000,7917,A,YES
+EMP-005,Aisha Patel,Engineering,Sr Backend Developer,04-Nov-19,85000,7083,A,YES
+EMP-006,Tom Fletcher,Engineering,Sr Frontend Developer,06-Jan-20,80000,6667,A,YES
+EMP-007,Emma Wilson,Engineering,Full Stack Developer,02-Mar-20,65000,5417,A,YES
+EMP-008,Raj Kapoor,Engineering,SRE / DevOps,01-Jun-20,70000,5833,A,YES
+EMP-009,Lisa Chen,Engineering,Data Engineer,01-Sep-20,72000,6000,A,YES
+EMP-010,David O'Connor,Engineering,QA Lead,04-Jan-21,55000,4583,A,YES
+EMP-011,Nina Johansson,Engineering,Backend Developer,01-Mar-21,60000,5000,A,YES
+EMP-012,Carlos Mendez,Engineering,Frontend Developer,01-Jun-21,55000,4583,A,YES
+EMP-013,Fatima Al-Rashid,Product,Product Manager,01-Sep-21,65000,5417,A,YES
+EMP-014,Oliver Gray,Sales,Account Executive,04-Jan-22,55000,4583,A,YES
+EMP-015,Amara Singh,Sales,SDR (Sales Dev Rep),07-Mar-22,35000,2917,A,YES
+EMP-016,Ben Thompson,Engineering,Jr Developer,06-Jun-22,40000,3333,A,YES
+EMP-017,Chloe Wright,Marketing,Marketing Manager,05-Sep-22,45000,3750,A,YES
+EMP-018,Daniel Kim,Product,Product Designer,03-Jan-23,50000,4167,A,YES
+EMP-019,Elena Rossi,Customer Success,CS Lead,06-Mar-23,48000,4000,A,YES
+EMP-020,Freddie Jones,Customer Success,Customer Success Mgr,05-Jun-23,42000,3500,A,YES
+EMP-021,Grace Lee,Engineering,Jr Backend Developer,04-Sep-23,38000,3167,A,YES
+EMP-022,Henry Brown,Customer Success,Support Engineer,02-Jan-24,35000,2917,A,YES
+EMP-023,Ivy Wang,Marketing,Content Marketing Exec,04-Mar-24,32000,2667,A,YES
+EMP-024,Jake Miller,Sales,SDR (Sales Dev Rep),03-Jun-24,30000,2500,C,YES
+EMP-025,Katie Scott,Operations,Office Manager,02-Sep-24,28000,2333,A,YES
+EMP-026,Liam Taylor,Engineering,Jr Frontend Developer,06-Jan-25,35000,2917,A,YES
+EMP-027,Mia Clark,Product,Associate PM,03-Mar-25,38000,3167,A,YES
+EMP-028,Noah Walker,Marketing,Graphic Designer,02-Jun-25,32000,2667,A,YES
+EMP-029,Olivia Hall,Customer Success,Onboarding Specialist,01-Sep-25,35000,2917,A,YES
+EMP-030,Patrick Young,Engineering,Graduate Developer,05-Jan-26,30000,2500,C,YES
