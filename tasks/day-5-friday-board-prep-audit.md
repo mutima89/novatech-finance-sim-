@@ -68,7 +68,7 @@ As the final task of the week, produce a summary for Sarah:
 |---------|------------|
 | Barclays Main | 159,361.50 |
 | Barclays Payroll | 0.00 |
-| Starling Expense | 3,366.21 |
+| Starling Expense | 3,366.31 |
 | **Total Cash** | **162,727.71** |
 
 **Next week's expected cash movements:**

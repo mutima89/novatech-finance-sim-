@@ -1,5 +1,5 @@
 Date,Type,Description,Reference,Debit,Credit,Balance (after)
-01-Jun-26,B/FWD,Balance brought forward,,,247830.55
+01-Jun-26,B/FWD,Balance brought forward,,,,247830.55
 01-Jun-26,DD,WeWork - June rent,DD-8721,3600.00,,244230.55
 02-Jun-26,DD,AWS - May hosting,DD-8722,5100.00,,239130.55
 02-Jun-26,BACS,DataFlow Corp - INV-2026-0601,PAY-601,,2157.60,241288.15

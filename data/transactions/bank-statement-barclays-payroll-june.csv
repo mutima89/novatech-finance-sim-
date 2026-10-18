@@ -1,5 +1,5 @@
 Date,Type,Description,Reference,Debit,Credit,Balance (after)
-03-Jun-26,B/FWD,Balance brought forward,,,0.00
+03-Jun-26,B/FWD,Balance brought forward,,,,0.00
 03-Jun-26,CHAPS,Transfer from Barclays Main (payroll funding),INT-101,,48720.00,48720.00
 03-Jun-26,CHAPS,HMRC - PAYE & NI (May payroll),PAYE-06,18700.00,,30020.00
 03-Jun-26,CHAPS,Pension Provider - Workplace pensions,AEO-06,4200.00,,25820.00

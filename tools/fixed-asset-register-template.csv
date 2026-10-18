@@ -1,4 +1,4 @@
-Asset Category,Purchase Date,Cost (£),Residual Value (£),Useful Life (Years),Depreciation Method,Monthly Deprecation (£),Accum. Deprec. to Date (£),Net Book Value (£)
-Office Equipment,01-Jan-20,35000,0,5,Straight Line,583.33,,,
-Computer Equipment,Various,128000,0,3,Straight Line,3555.56,,,
-Software Dev (Capitalised),01-Jan-22,210000,0,5,Straight Line,3500.00,,,
+Asset Category,Purchase Date,Cost (£),Residual Value (£),Useful Life (Years),Depreciation Method,Monthly Depreciation (£),Accum. Deprec. to Date (£),Net Book Value (£)
+Office Equipment,01-Jan-20,35000,0,5,Straight Line,583.33,,
+Computer Equipment,Various,128000,0,3,Straight Line,3555.56,,
+Software Dev (Capitalised),01-Jan-22,210000,0,5,Straight Line,3500.00,,

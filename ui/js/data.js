@@ -204,17 +204,17 @@ const BANK_STARLING = [
   { date: "02-Jun-26", type: "POS", desc: "Costa Coffee - Client meeting (James O)", ref: "TX-001", debit: 8.50, credit: 0, balance: 4991.50 },
   { date: "03-Jun-26", type: "POS", desc: "Greggs - Office team breakfast", ref: "TX-002", debit: 32.40, credit: 0, balance: 4959.10 },
   { date: "05-Jun-26", type: "POS", desc: "Trainline - James O to London", ref: "TX-003", debit: 128.00, credit: 0, balance: 4831.10 },
-  { date: "08-Jun-26", type: "POS", desc: "Uber - Priya S to airport (conference)", ref: "TX-004", debit: 45.00, credit: 0, balance: 4786.00 },
-  { date: "10-Jun-26", type: "POS", desc: "Amazon Business - Office cable kit", ref: "TX-005", debit: 67.80, credit: 0, balance: 4718.20 },
-  { date: "12-Jun-26", type: "POS", desc: "The Pasta Factory - Team lunch (12 ppl)", ref: "TX-006", debit: 156.00, credit: 0, balance: 4562.20 },
-  { date: "15-Jun-26", type: "POS", desc: "Currys - Webcam x5 (remote hires)", ref: "TX-007", debit: 149.50, credit: 0, balance: 4412.70 },
-  { date: "17-Jun-26", type: "POS", desc: "OpenTable - Client dinner (Sarah C)", ref: "TX-008", debit: 234.00, credit: 0, balance: 4178.70 },
-  { date: "19-Jun-26", type: "BACS", desc: "Adobe Creative Cloud subscription", ref: "TX-009", debit: 59.99, credit: 0, balance: 4118.71 },
-  { date: "22-Jun-26", type: "POS", desc: "Trainline - Mark R to Birmingham", ref: "TX-010", debit: 85.00, credit: 0, balance: 4033.71 },
-  { date: "24-Jun-26", type: "POS", desc: "WH Smith - Conference supplies", ref: "TX-011", debit: 42.50, credit: 0, balance: 3991.21 },
-  { date: "26-Jun-26", type: "POS", desc: "The Botanist - Client drinks event", ref: "TX-012", debit: 312.00, credit: 0, balance: 3679.21 },
-  { date: "28-Jun-26", type: "BACS", desc: "DigitalOcean - Side project hosting", ref: "TX-013", debit: 24.00, credit: 0, balance: 3655.21 },
-  { date: "30-Jun-26", type: "POS", desc: "Argos - Office chair replacement x2", ref: "TX-014", debit: 289.00, credit: 0, balance: 3366.21 }
+  { date: "08-Jun-26", type: "POS", desc: "Uber - Priya S to airport (conference)", ref: "TX-004", debit: 45.00, credit: 0, balance: 4786.10 },
+  { date: "10-Jun-26", type: "POS", desc: "Amazon Business - Office cable kit", ref: "TX-005", debit: 67.80, credit: 0, balance: 4718.30 },
+  { date: "12-Jun-26", type: "POS", desc: "The Pasta Factory - Team lunch (12 ppl)", ref: "TX-006", debit: 156.00, credit: 0, balance: 4562.30 },
+  { date: "15-Jun-26", type: "POS", desc: "Currys - Webcam x5 (remote hires)", ref: "TX-007", debit: 149.50, credit: 0, balance: 4412.80 },
+  { date: "17-Jun-26", type: "POS", desc: "OpenTable - Client dinner (Sarah C)", ref: "TX-008", debit: 234.00, credit: 0, balance: 4178.80 },
+  { date: "19-Jun-26", type: "BACS", desc: "Adobe Creative Cloud subscription", ref: "TX-009", debit: 59.99, credit: 0, balance: 4118.81 },
+  { date: "22-Jun-26", type: "POS", desc: "Trainline - Mark R to Birmingham", ref: "TX-010", debit: 85.00, credit: 0, balance: 4033.81 },
+  { date: "24-Jun-26", type: "POS", desc: "WH Smith - Conference supplies", ref: "TX-011", debit: 42.50, credit: 0, balance: 3991.31 },
+  { date: "26-Jun-26", type: "POS", desc: "The Botanist - Client drinks event", ref: "TX-012", debit: 312.00, credit: 0, balance: 3679.31 },
+  { date: "28-Jun-26", type: "BACS", desc: "DigitalOcean - Side project hosting", ref: "TX-013", debit: 24.00, credit: 0, balance: 3655.31 },
+  { date: "30-Jun-26", type: "POS", desc: "Argos - Office chair replacement x2", ref: "TX-014", debit: 289.00, credit: 0, balance: 3366.31 }
 ];
 
 // ======== DEBTORS AGED ========
